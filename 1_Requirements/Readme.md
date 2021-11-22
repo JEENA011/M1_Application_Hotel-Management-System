@@ -75,4 +75,16 @@
 ↗️ This application can be used by any hotel for reducing their manpower. 
 
 ## HOW
-↗️ 
+↗️ Have to manually fill details of the customer visiting to hotel for room booking.
+
+# DETAIL REQUIREMENTS : 
+
+## ⬇️ HIGH LEVEL REQUIREMENTS
+💠 Required IDE.
+💠 Required any C Compiler.
+💠 Required any desktop system.
+
+## ⬇️ LOW LEVEL REQUIREMENTS
+💠 Database of customer for view,delete,update.
+💠 RAM Minimum 2Gb
+💠
