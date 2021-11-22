@@ -59,6 +59,20 @@
 2. INCREASE DIGITAL ADAPTABILITY.
 
 ## THREATS
-1. DATABASE OVERFLOW.
+ ->  DATABASE OVERFLOW.
 
+## 4W's and 1H
+## WHO 
+↗️ Hotel Receptionist
 
+## WHAT
+↗️ AS Entering of CUSTOMER DETAILS happens mannually in hotels. It can be tedious. 
+
+## WHEN
+↗️ When any customer comes to book hotel. this application can be used for room booking and so many other related things like to delete, update the customer record or change the room.
+
+## WHERE
+↗️ This application can be used by any hotel for reducing their manpower. 
+
+## HOW
+↗️ 
