@@ -80,11 +80,14 @@
 # DETAIL REQUIREMENTS : 
 
 ## ⬇️ HIGH LEVEL REQUIREMENTS
-💠 Required IDE.
-💠 Required any C Compiler.
-💠 Required any desktop system.
+
+ - Required 1 IDE.
+ - Required any C Compiler.
+ - Required any desktop system.
+
 
 ## ⬇️ LOW LEVEL REQUIREMENTS
-💠 Database of customer for view,delete,update.
-💠 RAM Minimum 2Gb
-💠
+
+- Database of customer for view,delete,update.
+- RAM Minimum 2Gb.
+- Storage Minimum 256Gb.
