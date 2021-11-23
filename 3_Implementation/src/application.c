@@ -1,10 +1,10 @@
-#include"application.h"
-#include<stdio.h>
-#include<conio.h>
-#include<ctype.h>
-#include<windows.h>
-#include<stdlib.h>
-#include<time.h>
+#include"stdio.h"
+#include"header.h"
+#include"conio.h"
+#include"ctype.h"
+#include"windows.h"
+#include"stdlib.h"
+#include"time.h"
 
 void setcolor(int ForgC)
 { WORD wColor;
