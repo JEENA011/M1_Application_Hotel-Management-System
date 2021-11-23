@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME = hotel management
+PROJECT_NAME = application
 
 # Output directory
 BUILD = build
