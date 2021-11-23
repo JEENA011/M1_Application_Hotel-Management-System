@@ -23,4 +23,15 @@ struct CustomerDetails   //STRUCTURE DECLARATION
 	char arrivaldate[10];
 }s;
 
+#include"header.h"
+
+// FUNCTION PROTOTYPE
+
+void add(); 
+void list();
+void edit();  
+void delete1();
+void search();
+void setcolor(int);
+void login();
 #endif //#ifndef HEADER_H
