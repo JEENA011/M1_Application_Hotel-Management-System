@@ -167,7 +167,7 @@ int main(){
                         FILE* view;
                         view = fopen("rooms.txt","r");
                         printf("Available rooms are:\n");
-                        while(fscanf(view,"%s",h.room) != -1){	
+                        while(fscanf(view,"%9s",h.room) != -1){	
                         printf("%9s \n",h.room);
                         }
                         fclose(view);
@@ -222,13 +222,13 @@ void enter_name(){
     FILE *tmp2;
 
     printf("\nEnter guest name --> ");
-    scanf("%s",h.name);
+    scanf("%9s",h.name);
     printf("\nEnter their room number --> ");
-    scanf("%s",h.room);
+    scanf("%9s",h.room);
     printf("\n Enter wifi plan (1GB/5GB) --> ");
-    scanf("%s",h.wifi);
+    scanf("%9s",h.wifi);
     printf("\nEnter if breakfast is included --> ");
-    scanf("%s",h.bf);
+    scanf("%9s",h.bf);
     
     //entering guests
     fp = fopen("hotelnew.txt","a");
@@ -333,11 +333,11 @@ void checkout_guest(){
     exit(1);
     }
 	else{
-        while(fscanf(fp,"%s %s %s",h.name,h.room,h.wifi) != -1){
+        while(fscanf(fp,"%9s %9s %9s",h.name,h.room,h.wifi) != -1){
             fgetc(fp);	
 		    fgets(h.bf, 20, (FILE*)fp);
 			    if(strcmp(h.name,checkout_name) != 0){
-                    fprintf(tmp,"%s %s %s %s",h.name,h.room,h.wifi,h.bf);
+                    fprintf(tmp,"%9s %9s %9s %9s",h.name,h.room,h.wifi,h.bf);
                 }
                 else{
                    strcpy(add_room,h.room);
