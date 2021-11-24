@@ -36,5 +36,6 @@ void list();
 void edit();
 void delete1();
 void search();
+void login();
 
 #endif //#ifndef APPLICATION_H
