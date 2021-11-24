@@ -1978,7 +1978,7 @@ int IsStringInBiggerString(const char* longstring, const char* shortstring)
 {
     const char* lptr = longstring;
     const char* sptr = shortstring;
-    const char* lnext = lptr;
+    const char* lnext;
 
     if (*sptr == '*')
     {
