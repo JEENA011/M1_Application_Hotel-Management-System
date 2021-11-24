@@ -151,7 +151,7 @@ void find_room(){
     int roomFound =0;
     FILE *fp;
     printf("\nEnter room number to find -->");
-    scanf("%s",entered_room);   
+    scanf("%9s",entered_room);   
   
     fp = fopen("hotelnew.txt","r");	
     while(fscanf(fp,"%s %s %s",h.name,h.room,h.wifi) != -1){	
