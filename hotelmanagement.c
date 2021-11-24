@@ -293,7 +293,7 @@ void find_name(){
     int guestFound =0;
 
     printf("\nEnter guest name to find -->");
-    scanf("%s",entered_name);   
+    scanf("%9s",entered_name);   
   
     fp = fopen("hotelnew.txt","r");	
     while(fscanf(fp,"%s %s %s",h.name,h.room,h.wifi) != -1){	
