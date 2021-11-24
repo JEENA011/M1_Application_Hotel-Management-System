@@ -74,7 +74,7 @@ int main(){
                         FILE* fpi;
                         fpi = fopen("hotelnew.txt","r");	
 
-                        while(fscanf(fpi,"%s %s %s",h.name,h.room,h.wifi) != -1){	
+                        while(fscanf(fpi,"%9s %9s %9s",h.name,h.room,h.wifi) != -1){	
                           fgets(h.bf, 255, (FILE*)fpi);
                           printf("%s %s %s %s \n",h.name,h.room,h.wifi,h.bf);
                          }
