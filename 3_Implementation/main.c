@@ -1,66 +1,45 @@
-#include"stdio.h"
-#include"ctype.h"
-#include"windows.h"
-#include"stdlib.h"
-#include"time.h"
-#include"header.h"
+#include"application.h"
 
-int main()
-{     // MAIN FUNCTION	
+int main(){
 	int i=0;
-	
+
 	time_t t;
 	time(&t);
 	char customername;
 	char choice;
 
-	system("cls");   // FOR CLEARING SCREEN
-	setcolor(15);
-	printf(" -------------------------------------------------------------------------\n");
-	printf("|                                                                         |\n");      
-	printf("|                                                                         |\n");
-	printf("|  OOOOOO   OOOOOO OOOOOO OOOOOO OOOOOO OOOOOO O      O OOOOOOO  OOOOOO   |\n");
-	printf("|  O        O    O O      O        O      O    O O    O O        O        |\n");
-	printf("|  O  OOOOO OOOOOO OOOOO  OOOOO    O      O    O  O   O O  OOOOO OOOOOO   |\n");
-	printf("|  O    O   O  O   O      O        O      O    O   O  O O    O        O   |\n");
-	printf("|  OOOOOO   O   O  OOOOOO OOOOOO   O    OOOOOO O    O O OOOOOO   OOOOOO   |\n");
-	printf("|                                                                         |\n");                       
-	printf(" -------------------------------------------------------------------------\n");
- 	printf("\t\t*************************************************\n");
-	printf("\t\t*                                               *\n");
-	printf("\t\t*       -----------------------------           *\n");
-	printf("\t\t*        WELCOME TO HOTEL DESERT CAVE           *\n");
-	printf("\t\t*       -----------------------------           *\n");
-	printf("\t\t*                                               *\n");
-	printf("\t\t*                                               *\n");
-	printf("\t\t*                                               *\n");
-	printf("\t\t*    Brought To You By code-projects.org        *\n");
-	printf("\t\t*                 ESP,XYZ                       *\n");
-	printf("\t\t*     CONTACT US:18-87454575552,035455852       *\n");
-	printf("\t\t*************************************************\n\n\n");
+	system("cls");
+ 	printf("\t\t*********************************************\n");
+	printf("\t\t*                                           *\n");
+	printf("\t\t*       ----------------------------        *\n");
+	printf("\t\t*         HOTEL MANAGEMENT SYSTEM           *\n");
+	printf("\t\t*       ----------------------------        *\n");
+	printf("\t\t*                                           *\n");
+	printf("\t\t*                                           *\n");
+	printf("\t\t*                                           *\n");
+	printf("\t\t*********************************************\n\n\n");
 		for(i=0;i<80;i++)
 		printf("-");
 	    printf("\nCurrent date and time : %s",ctime(&t));
 	    for(i=0;i<80;i++)
 		printf("-");
 	printf(" \n Press any key to continue:");
-	
-	getch();	
+
+	getch();
     system("cls");
     login();
     system("cls");
-	while (1)      // INFINITE LOOP
+	while (1)
 	{
 		system("cls");
-		setcolor(10);
-		 for(i=0;i<80;i++)
+
+        for(i=0;i<80;i++)
 		printf("-");
 		printf("\n");
 		printf("   ******************************  |MAIN MENU|  ***************************** \n");
 		for(i=0;i<80;i++)
 		printf("-");
 		printf("\n");
-		setcolor(10);
 		printf("\t\t *Please enter your choice for menu*:");
 		printf("\n\n");
 		printf(" \n Enter 1 -> Book a room");
@@ -81,11 +60,11 @@ int main()
 	    printf("\nCurrent date and time : %s",ctime(&t));
 	    for(i=0;i<80;i++)
 		printf("-");
-		
+
 		choice=getche();
 		choice=toupper(choice);
 		switch(choice)           // SWITCH STATEMENT
-		{	
+		{
 			case '1':
 				add();break;
 			case '2':
@@ -111,4 +90,3 @@ int main()
 		}
 	}
 }
-
