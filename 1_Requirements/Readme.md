@@ -4,14 +4,14 @@
  ## FEATURE
  ## In application there are lots of operation which  can be performed like :
  ## 💠 BOOK A ROOM FOR CUSTOMER BY ENTERING THEIR NECESSARY DETAILS LIKE
- 1. Customer Name
- 2. Address
- 3. Phone Number
- 4. Nationality
- 5. Email ID
- 6. Number of Days to book
- 7. Arrival Date
- 8. Room Number allotted
+       1. Customer Name
+       2. Address
+       3. Phone Number
+       4. Nationality
+       5. Email ID
+       6. Number of Days to book
+       7. Arrival Date
+       8. Room Number allotted
  ### 💠 VIEW RECORD OF ALL CUSTOMERS
 
  ### 💠 DELETE CUSTOMER RECORD
@@ -27,32 +27,32 @@
  -> For Taking EXIT from application we have to press exit.
 
  ## BENEFIT
- 1. FASTER DATA ENTRY
- 2. SECURE
- 3. LESS TIME CONSUMING.
+       1. FASTER DATA ENTRY
+       2. SECURE
+       3. LESS TIME CONSUMING.
 
  ## 🔎 I HAVE MADE SO MANY FUNCTIONS AND THEIR WORKING CAN BE UNDERSTOOD EASILY BY THEIR NAMES ONLY
- 1. void add(); 
- 2. void list();
- 3. void edit(); 
- 4. void delete1();
- 5. void search();
+       1. void add(); 
+       2. void list();
+       3. void edit(); 
+       4. void delete1();
+       5. void search();
 
  ## ⚔️ SWOT ANALYSIS
 
  ## STRENGTHS 
- 1. EASY TO USE
- 2. PASSWORD PROTECTED APPLICATION (You need to enter USERNAME and PASSWORD for using this application)
- 3. HIGH SECURITY
- 4. CAN RUN WITHOUT INTERNET
+       1. EASY TO USE
+       2. PASSWORD PROTECTED APPLICATION (You need to enter USERNAME and PASSWORD for using this application)
+       3. HIGH SECURITY
+       4. CAN RUN WITHOUT INTERNET
 
  ## WEAKNESS
- 1. REQUIRED MEMORY FOR SAVING CUSTOMER DATA.
- 2. DATA ONCE DELETED CAN'T BE RECOVERED.
+       1. REQUIRED MEMORY FOR SAVING CUSTOMER DATA.
+       2. DATA ONCE DELETED CAN'T BE RECOVERED.
 
  ## OPPORTUNITIES
- 1. SELLING TO THE HOTEL OWNERS.
- 2. INCREASE DIGITAL ADAPTABILITY.
+       1. SELLING TO THE HOTEL OWNERS.
+       2. INCREASE DIGITAL ADAPTABILITY.
 
  ## THREATS
  ->  DATABASE OVERFLOW.
@@ -72,10 +72,10 @@
  ↗️ Have to manually fill details of the customer visiting to hotel for room booking.
  # DETAIL REQUIREMENTS 
  ## ⬇️ HIGH LEVEL REQUIREMENTS
-   Required 1 IDE.
-   Required any C Compiler.
-   Required any desktop system.
+      Required 1 IDE.
+      Required any C Compiler.
+      Required any desktop system.
  ## ⬇️ LOW LEVEL REQUIREMENTS
-  Database of customer for view,delete,update.
-  RAM Minimum 2Gb.
-  Storage Minimum 256Gb.
+      Database of customer for view,delete,update.
+     RAM Minimum 2Gb.
+     Storage Minimum 256Gb.
