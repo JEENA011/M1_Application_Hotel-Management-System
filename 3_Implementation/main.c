@@ -161,7 +161,7 @@ int main(){
                 }
                     
                 printf("Would you like to continue? (y/n)\n");
-                scanf("%s",user_entry);
+                scanf("%9s",user_entry);
 
                 }
                 if(strcmp(user_entry,"n") == 0){
