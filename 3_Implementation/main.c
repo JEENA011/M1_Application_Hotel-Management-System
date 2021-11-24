@@ -33,8 +33,8 @@ int main(){
                 printf("\n Hello admin!\n Please enter the password to continue --> ");
 
                 for(i=0; i<6; i++){
-                    scanf("%s",pass);
-                    fscanf(passw,"%s",filepass);
+                    scanf("%9s",pass);
+                    fscanf(passw,"%9s",filepass);
                     if (strcmp(filepass,pass) == 0) {
                         printf("\n\nAccess granted!\n");
                         fclose(passw);
@@ -102,7 +102,7 @@ int main(){
                 }
                 //enter again?
                 printf("Would you like to continue? (y/n)\n");
-                scanf("%s",admin_entry);
+                scanf("%9s",admin_entry);
 
                 }
                 if(strcmp(admin_entry,"n") == 0){
@@ -132,7 +132,7 @@ int main(){
                         FILE* view;
                         view = fopen("rooms.txt","r");
                         printf("Available rooms are:\n");
-                        while(fscanf(view,"%s",h.room) != -1){	
+                        while(fscanf(view,"%9s",h.room) != -1){	
                         printf("%s \n",h.room);
                         }
                         fclose(view);
@@ -141,13 +141,13 @@ int main(){
 
                     case 2:{
                         printf("Enter your name: ");
-                        scanf("%s",h.name);
+                        scanf("%9s",h.name);
                         printf("Enter room to book: ");
-                        scanf("%s",h.room);
+                        scanf("%9s",h.room);
                         printf("Enter WiFI plan (1GB/5GB): ");
-                        scanf("%s",h.wifi);
+                        scanf("%9s",h.wifi);
                         printf("Enter if bf (yes/no): ");
-                        scanf("%s",h.bf);
+                        scanf("%9s",h.bf);
 
                         enter = fopen("bookings.txt","a");
 
