@@ -12,17 +12,13 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-/* Included to allow users to call functions from math library if required */
-
-
-/* strcture definition must be reused by the users in their code */
-
-
 #include<stdio.h>
 #include<ctype.h>
 #include<string.h>
 #include<stdlib.h>
 #include<time.h>
+
+/* structure definition must be reused by the users in their code */
 
 struct CustomerDetails   //STRUCTURE DECLARATION
 {
