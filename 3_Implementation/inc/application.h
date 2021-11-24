@@ -23,6 +23,10 @@ struct hotel
 
 }h;
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
 //Method Declaration
 
 void enter_name();
