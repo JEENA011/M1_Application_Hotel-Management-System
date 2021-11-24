@@ -1429,7 +1429,7 @@ void UnityAssertEqualStringArray(UNITY_INTERNAL_PTR expected,
                                  const UNITY_LINE_TYPE lineNumber,
                                  const UNITY_FLAGS_T flags)
 {
-    UNITY_UINT32 i = 0;
+    UNITY_UINT32 i;
     UNITY_UINT32 j = 0;
     const char* expd = NULL;
     const char* act = NULL;
