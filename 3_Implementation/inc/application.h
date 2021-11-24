@@ -12,31 +12,23 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include<stdio.h>
-#include<ctype.h>
-#include<string.h>
-#include<stdlib.h>
-#include<time.h>
 
-/* structure definition must be reused by the users in their code */
-
-struct CustomerDetails   //STRUCTURE DECLARATION
+//structure defined to store name, room, bf and wifi required
+struct hotel
 {
-	char roomnumber[10];
-	char name[20];
-	char address[25];
-	char phonenumber[15];
-	char nationality[15];
-	char email[20];
-	char period[10];
-	char arrivaldate[10];
-}s;
+    char name[20];
+    char room[20];
+    char bf[20];
+    char wifi[20];
 
-void add();
-void list();
-void edit();
-void delete1();
-void search();
-void login();
+}h;
+
+//Method Declaration
+
+void enter_name();
+void find_name();
+void find_room();
+void checkout_guest();
+void view_bookings();
 
 #endif //#ifndef APPLICATION_H
