@@ -1,7 +1,7 @@
 # IMAGES 📜
-## 1.png - WELCOME PAGE
-## 2.png - MAIN MENU PAGE
-## 3.png - VIEW RECORD PAGE
-## 5.png - DELETE RECORD PAGE
-## 6.png - SEARCH RECORD PAGE
-## 7.png - EDIT RECORD PAGE
+### 1.png - WELCOME PAGE
+### 2.png - MAIN MENU PAGE
+### 3.png - VIEW RECORD PAGE
+### 5.png - DELETE RECORD PAGE
+### 6.png - SEARCH RECORD PAGE
+### 7.png - EDIT RECORD PAGE
