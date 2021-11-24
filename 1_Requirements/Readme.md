@@ -1,21 +1,17 @@
-# 🏨 HOTEL MANAGEMENT SYSTEM IN C :
-
+# 🏨 HOTEL MANAGEMENT SYSTEM IN C
 # INTRODUCTION
-#### The "Hotel Management System" application is for "Hotel-Receptionist" by which they can handle almost all of the necessary things from their end. This application can be very useful for all those hotels who follows register only for entering the customer details because paper work can't be effective in long term. They have to opt for any such type of application so that their customer data always remain secure and easily accessible.
-
-
+## The "Hotel Management System" application is for "Hotel-Receptionist" by which they can handle almost all of the necessary things from their end This application can be very useful for all those hotels who follows register only for entering the customer details because paper work can't be effective in long term They have to opt for any such type of application so that their customer data always remain secure and easily accessible
 # FEATURE
 ## In application there are lots of operation which  can be performed like :
-
 ### 💠 BOOK A ROOM FOR CUSTOMER BY ENTERING THEIR NECESSARY DETAILS LIKE
-1. Customer Name
-2. Address
-3. Phone Number
-4. Nationality
-5. Email ID
-6. Number of Days to book
-7. Arrival Date
-8. Room Number allotted
+ 1. Customer Name
+ 2. Address
+ 3. Phone Number
+ 4. Nationality
+ 5. Email ID
+ 6. Number of Days to book
+ 7. Arrival Date
+ 8. Room Number allotted
 ### 💠 VIEW RECORD OF ALL CUSTOMERS
 
 ### 💠 DELETE CUSTOMER RECORD
@@ -70,24 +66,16 @@
 
 ## WHEN
 ↗️ When any customer comes to book hotel. this application can be used for room booking and so many other related things like to delete, update the customer record or change the room.
-
 ## WHERE
 ↗️ This application can be used by any hotel for reducing their manpower. 
-
 ## HOW
 ↗️ Have to manually fill details of the customer visiting to hotel for room booking.
-
 # DETAIL REQUIREMENTS 
-
 ## ⬇️ HIGH LEVEL REQUIREMENTS
-
- - Required 1 IDE.
- - Required any C Compiler.
- - Required any desktop system.
-
-
+   Required 1 IDE.
+   Required any C Compiler.
+   Required any desktop system.
 ## ⬇️ LOW LEVEL REQUIREMENTS
-
-- Database of customer for view,delete,update.
-- RAM Minimum 2Gb.
-- Storage Minimum 256Gb.
+  Database of customer for view,delete,update.
+  RAM Minimum 2Gb.
+  Storage Minimum 256Gb.
