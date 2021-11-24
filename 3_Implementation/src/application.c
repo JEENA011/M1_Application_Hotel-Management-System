@@ -7,7 +7,7 @@ void enter_name(){
     FILE *tmp2;
 
     printf("\nEnter guest name --> ");
-    scanf("%s",h.name);
+    scanf("%9s",h.name);
     printf("\nEnter their room number --> ");
     scanf("%s",h.room);
     printf("\n Enter wifi plan (1GB/5GB) --> ");
@@ -56,7 +56,7 @@ void enter_name(){
     view = fopen("rooms.txt","r");
 
     
-    while(fscanf(view,"%s",h.room) != -1){
+    while(fscanf(view,"%9s",h.room) != -1){
 			    if(strcmp(h.room,remove_room) != 0){
                     fprintf(tmp2,"%s",h.room);
                     fprintf(tmp2,"\n");
@@ -81,7 +81,7 @@ void find_name(){
     scanf("%s",entered_name);   
   
     fp = fopen("hotelnew.txt","r");	
-    while(fscanf(fp,"%s %s %s",h.name,h.room,h.wifi) != -1){	
+    while(fscanf(fp,"%9s %9s %9s",h.name,h.room,h.wifi) != -1){	
     fgets(h.bf, 255, (FILE*)fp);
     if(strcmp(h.name,entered_name) == 0){
                      guestFound = 1;
