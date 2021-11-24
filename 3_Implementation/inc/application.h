@@ -18,6 +18,11 @@
 /* strcture definition must be reused by the users in their code */
 
 
+#include<stdio.h>
+#include<ctype.h>
+#include<string.h>
+#include<stdlib.h>
+#include<time.h>
 
 struct CustomerDetails   //STRUCTURE DECLARATION
 {
