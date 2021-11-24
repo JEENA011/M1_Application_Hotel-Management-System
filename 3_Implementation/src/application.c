@@ -166,6 +166,7 @@ void delete1()
 		getch();
 		fclose(f);
 		fclose(t);
+		void main(void);
 		main();
 	}
 	fclose(f);
