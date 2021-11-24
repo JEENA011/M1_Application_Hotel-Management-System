@@ -31,4 +31,12 @@ void find_room();
 void checkout_guest();
 void view_bookings();
 
+//Instance Field Declaration
+FILE* view;
+FILE *fp;
+FILE* enter;
+char admin_entry[20] = {'y'};
+char user_entry[20] = {'y'};
+
+
 #endif //#ifndef APPLICATION_H
