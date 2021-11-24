@@ -2,7 +2,7 @@
  ## INTRODUCTION
  ## The "Hotel Management System" application is for "Hotel-Receptionist" by which they can handle almost all of the necessary things from their end This application can be very useful for all those hotels who follows register only for entering the customer details because paper work can't be effective in long term They have to opt for any such type of application so that their customer data always remain secure and easily accessible
  ## FEATURE
- ## In application there are lots of operation which  can be performed like :
+ ## In application there are lots of operation which  can be performed like
  ## 💠 BOOK A ROOM FOR CUSTOMER BY ENTERING THEIR NECESSARY DETAILS LIKE
        1. Customer Name
        2. Address
@@ -70,7 +70,7 @@
  ↗️ This application can be used by any hotel for reducing their manpower. 
  ## HOW
  ↗️ Have to manually fill details of the customer visiting to hotel for room booking.
- # DETAIL REQUIREMENTS 
+ ## DETAIL REQUIREMENTS 
  ## ⬇️ HIGH LEVEL REQUIREMENTS
       Required 1 IDE.
       Required any C Compiler.
