@@ -154,7 +154,7 @@ void find_room(){
     scanf("%9s",entered_room);   
   
     fp = fopen("hotelnew.txt","r");	
-    while(fscanf(fp,"%s %s %s",h.name,h.room,h.wifi) != -1){	
+    while(fscanf(fp,"%9s %9s %9s",h.name,h.room,h.wifi) != -1){	
     fgets(h.bf, 255, (FILE*)fp);
     if(strcmp(h.room,entered_room) == 0){
                      roomFound = 1;
@@ -176,7 +176,7 @@ void view_bookings(){
 
     enter = fopen("bookings.txt","r");	
 
-    while(fscanf(enter,"%s %s %s",h.name,h.room,h.wifi) != -1){	
+    while(fscanf(enter,"%9s %9s %9s",h.name,h.room,h.wifi) != -1){	
         fgets(h.bf, 255, (FILE*)enter);
         printf("%s %s %s %s \n",h.name,h.room,h.wifi,h.bf);
     }
