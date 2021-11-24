@@ -1,92 +1,181 @@
 #include"application.h"
 
-int main(){
-	int i=0;
+//main method
+int main(){ 
 
-	time_t t;
-	time(&t);
-	char customername;
-	char choice;
+    int a,b,c;
 
-	system("cls");
- 	printf("\t\t*********************************************\n");
-	printf("\t\t*                                           *\n");
-	printf("\t\t*       ----------------------------        *\n");
-	printf("\t\t*         HOTEL MANAGEMENT SYSTEM           *\n");
-	printf("\t\t*       ----------------------------        *\n");
-	printf("\t\t*                                           *\n");
-	printf("\t\t*                                           *\n");
-	printf("\t\t*                                           *\n");
-	printf("\t\t*********************************************\n\n\n");
-		for(i=0;i<80;i++)
-		printf("-");
-	    printf("\nCurrent date and time : %s",ctime(&t));
-	    for(i=0;i<80;i++)
-		printf("-");
-	printf(" \n Press any key to continue:");
+     //Welcome screen
 
-	getch();
-    system("cls");
-    login();
-    system("cls");
-	while (1)
-	{
-		system("cls");
+ 	printf("\n\n\t\t*************************************************\n");
+	printf("\t\t*                                               *\n");
+	printf("\t\t*       -----------------------------           *\n");
+	printf("\t\t*              WELCOME TO HOTEL              *\n");
+	printf("\t\t*       -----------------------------           *\n");
+	printf("\t\t*                                               *\n");
+	printf("\t\t*************************************************\n\n\n");
 
-        for(i=0;i<80;i++)
-		printf("-");
-		printf("\n");
-		printf("   ******************************  |MAIN MENU|  ***************************** \n");
-		for(i=0;i<80;i++)
-		printf("-");
-		printf("\n");
-		printf("\t\t *Please enter your choice for menu*:");
-		printf("\n\n");
-		printf(" \n Enter 1 -> Book a room");
-		printf("\n------------------------");
-		printf(" \n Enter 2 -> View Customer Record");
-		printf("\n----------------------------------");
-		printf(" \n Enter 3 -> Delete Customer Record");
-		printf("\n-----------------------------------");
-		printf(" \n Enter 4 -> Search Customer Record");
-		printf("\n-----------------------------------");
-		printf(" \n Enter 5 -> Edit Record");
-		printf("\n-----------------------");
-		printf(" \n Enter 6 -> Exit");
-		printf("\n-----------------");
-		printf("\n");
-		for(i=0;i<80;i++)
-		printf("-");
-	    printf("\nCurrent date and time : %s",ctime(&t));
-	    for(i=0;i<80;i++)
-		printf("-");
+    printf("\n>>>>>>>>>>>>\tFor ADMIN access enter --> 1 \t\t\t<<<<<<<<<<<<");
+    printf("\n>>>>>>>>>>>>\tFor USER access enter --> 2 \t\t\t<<<<<<<<<<<<");
+    printf("\n>> ");
+     scanf("%d",&a);
 
-		choice=getche();
-		choice=toupper(choice);
-		switch(choice)           // SWITCH STATEMENT
-		{
-			case '1':
-				add();break;
-			case '2':
-				list();break;
-			case '3':
-				delete1();break;
-			case '4':
-				search();break;
-			case '5':
-				edit();break;
-			case '6':
-				system("cls");
-				printf("\n\n\t *****THANK YOU*****");
-				printf("\n\t FOR TRUSTING OUR SERVICE");
-			//	Sleep(2000);
-				exit(0);
-				break;
-			default:
-				system("cls");
-				printf("Incorrect Input");
-				printf("\n Press any key to continue");
-				getch();
-		}
-	}
+        switch(a){
+            case 1:{
+                char pass[10];
+                char filepass[10];
+                int i;
+
+                FILE *passw;
+                passw = fopen("pass.txt","r");
+
+                //admins password prompt
+                printf("\n Hello admin!\n Please enter the password to continue --> ");
+
+                for(i=0; i<6; i++){
+                    scanf("%s",pass);
+                    fscanf(passw,"%s",filepass);
+                    if (strcmp(filepass,pass) == 0) {
+                        printf("\n\nAccess granted!\n");
+                        fclose(passw);
+                        break;
+                    }
+                    else{
+                     printf("\nIncorrect password, please try again.");
+                     printf("\nYou have %d trys left ",5-i-1);
+                     printf("\n\nEnter password >> ");
+                    }
+                    if(i==4){
+                        fclose(passw);
+                        return 0;
+                    }
+
+               
+                }
+
+                 //re-entry if
+                while(admin_entry[0] =='y'){
+
+                printf("\n>>>>>>>>>>>>\tTo VIEW booking requests --> 1 \t\t\t<<<<<<<<<<<<");
+                printf("\n>>>>>>>>>>>>\tTo VIEW booked guests details --> 2 \t\t\t<<<<<<<<<<<<");
+                printf("\n>>>>>>>>>>>>\tTo ENTER new guest --> 3 \t\t\t<<<<<<<<<<<<");
+   	            printf("\n>>>>>>>>>>>>\tTo FIND room number of existing guest --> 4 \t<<<<<<<<<<<<");
+                printf("\n>>>>>>>>>>>>\tTo FIND guest of occupied room --> 5 \t<<<<<<<<<<<<");
+                printf("\n>>>>>>>>>>>>\tTo CHECKOUT room number of existing guest --> 6 <<<<<<<<<<<<\n");
+                printf(">> ");
+                scanf("%d",&b);
+
+                switch(b){
+                    case 1:{
+                        view_bookings();
+                        break;
+                    }
+                    case 2:{
+                        FILE* fpi;
+                        fpi = fopen("hotelnew.txt","r");	
+
+                        while(fscanf(fpi,"%s %s %s",h.name,h.room,h.wifi) != -1){	
+                          fgets(h.bf, 255, (FILE*)fpi);
+                          printf("%s %s %s %s \n",h.name,h.room,h.wifi,h.bf);
+                         }
+                         break;
+                    }
+                    case 3:{
+                        enter_name();
+                        break;
+                    }
+                    case 4:{
+                        find_name();
+                        break;
+                    }
+                    case 5:{
+                        find_room();
+                        break;
+                    }
+                case 6:{
+                    checkout_guest();
+                    break;
+                    }
+                    default:{
+                        printf("\n Wrong entry!");
+                    }
+                }
+                //enter again?
+                printf("Would you like to continue? (y/n)\n");
+                scanf("%s",admin_entry);
+
+                }
+                if(strcmp(admin_entry,"n") == 0){
+                    printf("Exiting...\n");
+                    printf("\e[1;1H\e[2J");
+                    printf("\n >Exited<\n\n");
+                    //system("clear");
+                    return 0;
+                }
+                else{
+                    printf("Wrong entry!\nExiting...\n");
+                    return 0;
+                }
+                break;
+            }
+            
+                     
+            case 2:{
+                while(user_entry[0] =='y'){
+                printf("\nHello user and welcome to Hotel!");
+                printf("\n>>>>>>>>>>>>\tTo view available rooms --> 1 \t\t\t<<<<<<<<<<<<");
+   	            printf("\n>>>>>>>>>>>>\tTo request booking of room --> 2 \t<<<<<<<<<<<<");
+                printf("\n>> ");
+                scanf("%d",&c);
+                switch(c){
+                    case 1:{
+                        FILE* view;
+                        view = fopen("rooms.txt","r");
+                        printf("Available rooms are:\n");
+                        while(fscanf(view,"%s",h.room) != -1){	
+                        printf("%s \n",h.room);
+                        }
+                        fclose(view);
+                        break;
+                    }
+
+                    case 2:{
+                        printf("Enter your name: ");
+                        scanf("%s",h.name);
+                        printf("Enter room to book: ");
+                        scanf("%s",h.room);
+                        printf("Enter WiFI plan (1GB/5GB): ");
+                        scanf("%s",h.wifi);
+                        printf("Enter if bf (yes/no): ");
+                        scanf("%s",h.bf);
+
+                        enter = fopen("bookings.txt","a");
+
+                        fprintf(enter,"%s %s %s %s",h.name,h.room,h.wifi,h.bf);
+                        fprintf(enter,"\n");
+
+                        printf("Succesfully requested booking\n");
+                        fclose(enter);
+
+                    }
+                }
+                    
+                printf("Would you like to continue? (y/n)\n");
+                scanf("%s",user_entry);
+
+                }
+                if(strcmp(user_entry,"n") == 0){
+                    printf("Exiting...\n");
+                    printf("\e[1;1H\e[2J");
+                    printf("\n >Exited<\n\n");
+                    //system("clear");
+                    return 0;
+                }
+                else{
+                    printf("Wrong entry!\nExiting...\n");
+                    return 0;
+                }
+                break;
+            }
+        }
 }
