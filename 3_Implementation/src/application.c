@@ -1,40 +1,18 @@
-#include"stdio.h"
-#include"header.h"
-#include"conio.h"
-#include"windows.h"
-#include"stdlib.h"
-#include"time.h"
-
-void setcolor(int ForgC)
-{ WORD wColor;
-HANDLE hStdOut=GetStdHandle(STD_OUTPUT_HANDLE);
-CONSOLE_SCREEN_BUFFER_INFO csbi;
-
-if(GetConsoleScreenBufferInfo(hStdOut,&csbi))
-{
-	wColor=(csbi.wAttributes & 0xB0)+(ForgC & 0x0B);
-//	SetConsoleTextAttributes(hStdOut,wColor);
-	SetConsoleTextAttribute(hStdOut,wColor);
-	
-}
-}
-
-
 void login()
 {
-	
+
 	int a=0,i=0;
-    char uname[10],c=' '; 
+    char uname[10],c=' ';
     char pword[10],code[10];
-    char user[10]="user";
-    char pass[10]="pass";
+    char user[10]="admin";
+    char pass[10]="admin";
     do
 {
 	system("cls");
-	
+
     printf("\n  **************************  LOGIN FORM  **************************  ");
     printf(" \n                       ENTER USERNAME:-");
-	scanf("%s", &uname); 
+	scanf("%s", &uname);
 	printf(" \n                       ENTER PASSWORD:-");
 	while(i<10)
 	{
@@ -45,35 +23,34 @@ void login()
 	    i++;
 	}
 	pword[i]='\0';
-	//char code=pword;
+
 	i=0;
-	//scanf("%s",&pword); 
-		if(strcmp(uname,user)==0 && strcmp(pword,pass)==0)
+
+		if(!(strcmp(uname,user) && strcmp(pword,pass)==0))
 	{
 	printf("  \n\n\n       WELCOME !!!! LOGIN IS SUCCESSFUL");
-	
+
 	break;
 	}
 	else
 	{
 		printf("\n        SORRY !!!!  LOGIN IS UNSUCESSFUL");
 		a++;
-		
+
 		getch();
-		
+
 	}
 }
 	while(a<=2);
 	if (a>2)
 	{
 		printf("\nSorry you have entered the wrong username and password for four times!!!");
-		
-		getch();
-		
-		}
-		system("cls");	
-}
 
+		getch();
+
+		}
+		system("cls");
+}
 
 
 void add()
@@ -117,12 +94,10 @@ void add()
 		test=getche();
 		if(test==27)
 			break;
-			
+
 	}
 	fclose(f);
 }
-
-
 
 void list()
 {
@@ -139,7 +114,7 @@ void list()
 	printf("\tEMAIL ");
 	printf("\t\t  PERIOD ");
 	printf("\t ARRIVALDATE \n");
-	
+
 	for(i=0;i<118;i++)
 		printf("-");
 	while(fread(&s,sizeof(s),1,f)==1)
@@ -158,8 +133,6 @@ void list()
 	fclose(f);
 	getch();
 }
-
-
 
 void delete1()
 {
@@ -184,7 +157,7 @@ void delete1()
 			fwrite(&s,sizeof(s),1,t);
 	}
 	if(i==1)
-	{       
+	{
 		printf("\n\n Records of Customer in this  Room number is not found!!");
 		//remove("E:/file.txt");
 	   //rename("E:/temp.txt","E:/file.txt");
@@ -202,8 +175,6 @@ void delete1()
 	fclose(t);
 	getch();
 }
-
-
 
 void search()
 {
@@ -234,14 +205,12 @@ system("cls");
 			break;
 		}
 	}
-	if(flag==1){	
+	if(flag==1){
 		printf("\n\tRequested Customer could not be found!");
 	}
 	getch();
 	fclose(f);
 }
-
-
 
 void edit()
 {
