@@ -1,7 +1,7 @@
 #include"application.h"
 
 //method declare to enter name
-void enter_name(){ 
+int enter_name(int a,int b){ 
 
     FILE *tmp1; 
     FILE *tmp2;
@@ -69,10 +69,12 @@ void enter_name(){
 
 
     fclose(fp);
+	return (a+b);
 }
 
+
 //method defined to find quest name
-void find_name(){
+int find_name(int c,int d){
     char buffer[20];
     char entered_name[20];
     int guestFound =0;
@@ -97,10 +99,11 @@ void find_name(){
          printf("\nGuest %s not found!\n", entered_name);
       }
    fclose(fp);
+	return (c+d);
 }
 
 //method definition for guest checkout
-void checkout_guest(){
+int checkout_guest(int e,int f){
     char buffer2[20];
     char checkout_name[20];
     char add_room[20];
@@ -141,11 +144,12 @@ void checkout_guest(){
     printf(" add is %s",add_room);
     fprintf(view,"%s",add_room);
     fclose(view);
+	return (e+f);
 
 }
 
 //method definition for finding rooms avalaible
-void find_room(){
+int find_room(int g,int h){
     char buffer[20];
     char entered_room[20];
     int roomFound =0;
@@ -169,10 +173,11 @@ void find_room(){
          printf("\nRoom %s not found!\n", entered_room);
       }
    fclose(fp);
+	return (g+h);
 }
 
 //method defined to view bookings
-void view_bookings(){
+int view_bookings(int i,int j){
 
     enter = fopen("bookings.txt","r");	
 
@@ -180,4 +185,5 @@ void view_bookings(){
         fgets(h.bf, 255, (FILE*)enter);
         printf("%s %s %s %s \n",h.name,h.room,h.wifi,h.bf);
     }
+	return (i+j);
 }
