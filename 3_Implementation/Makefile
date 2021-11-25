@@ -58,7 +58,7 @@ doc:
 	make -C ./documentation
 
 # Build and run the unit tests
-test:$(BUILD)
+$(BUILD):
 	gcc $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT).$(EXEC))
 	./$(call FixPath,$(TEST_OUTPUT).$(EXEC))
 
