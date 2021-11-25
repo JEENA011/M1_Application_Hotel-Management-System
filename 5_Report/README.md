@@ -79,3 +79,4 @@
       Database of customer for view,delete,update.
      RAM Minimum 2Gb.
      Storage Minimum 256Gb.
+  ![Alt text]( https://github.com/JEENA011/M1_Application_Hotel-Management-System/blob/main/5_Report/12.png)
